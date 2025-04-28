@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: retriever-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: retriever
+  template:
+    metadata:
+      labels:
+        app: retriever
+    spec:
+      containers:
+        - name: retriever
+          image: leonelholguin/popularpruebatecnica:retriever
+          ports:
+            - containerPort: 3002
+          volumeMounts:
+            - name: certs
+              mountPath: /certs
+          env:
+            - name: NODE_ENV
+              value: "development"
+      volumes:
+        - name: certs
+          secret:
+            secretName: ssl-certs

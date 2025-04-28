@@ -1,0 +1,71 @@
+# Dependencias
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.pnpm-debug.log
+
+# Directorios de construcción y distribución
+dist/
+build/
+out/
+.next/
+
+# Archivos de entorno
+# .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# Directorios y archivos de caché
+.npm
+.eslintcache
+.tsbuildinfo
+.cache/
+
+# Cobertura y pruebas
+coverage/
+.nyc_output/
+
+# Archivos del sistema y de IDE
+.DS_Store
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.project
+.classpath
+.settings/
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Archivos temporales
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Certificados y claves (excepto los de ejemplo o específicos del entorno)
+# *.pem
+*.key
+*.p12
+*.pfx
+!/certs/example.*
+
+# Archivos específicos de Docker
+.dockerignore
+
+# Archivos de bloqueo de versiones (opcional, dependiendo de tu estrategia)
+# package-lock.json
+# yarn.lock
+
+# Archivos de configuración local que deberían ser diferentes por entorno
+**/config/local.* 
